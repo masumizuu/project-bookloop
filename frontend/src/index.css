@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Mansalva', sans-serif;
+  font-size: medium;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+@layer components {
+  .btn-primary-cr {
+    @apply bg-transparent border-cream-0 rounded-2xl border-2 p-2 text-cream-0 font-bold hover:text-xl transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-cream-0/50 hover:px-4;
+  }
+  .btn-primary-br {
+    @apply bg-transparent border-brown-0 rounded-2xl border-2 p-2 text-brown-0 font-bold hover:text-xl transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-brown-0/50;
+  }
+
+  .btn-fancy {
+    @apply relative w-56 border-2 border-brown-0 text-brown-0 font-bold py-3 px-8 text-left hover:bg-brown-0 hover:text-cream-0 transition-all duration-300 ease-in-out rounded-lg;
+  }
+  .btn-fancy-line {
+    @apply absolute h-1 bg-cream-0 transition-all duration-500 ease-out;
+  }
+}
+
+@layer utilities {
+  .glow-brown {
+    text-shadow: 0 0 8px rgba(255, 173, 96, 0.8), 0 0 16px rgba(255, 173, 96, 0.6);
+  }
+  .hover-text-glow:hover {
+    text-shadow: 0 0 12px rgba(255, 173, 96, 1), 0 0 24px rgba(255, 173, 96, 0.9);
+    font-size: large;
+  }
+  .glow-cream {
+    text-shadow: 0 0 8px rgba(252, 249, 243, 0.8), 0 0 16px rgba(252, 249, 243, 0.6);
+  }
+  .hover-cream-glow:hover {
+    text-shadow: 0 0 12px rgba(252, 249, 243, 1), 0 0 24px rgba(252, 249, 243, 0.9);
+    font-size: large;
+  }
+  .subtext {
+    font-style: italic;
+    text-shadow: 0 0 8px rgba(255, 173, 96, 0.8), 0 0 16px rgba(255, 173, 96, 0.6);
+  }
+
+  .glow-brown-img {
+    box-shadow: 0 0 8px rgba(255, 173, 96, 0.8), 0 0 16px rgba(255, 173, 96, 0.6);
+  }
+  .hover-glow-img:hover {
+    box-shadow: 0 0 12px rgba(255, 173, 96, 1), 0 0 24px rgba(255, 173, 96, 0.9);
+    transform: scale(1.05); /* Optional: adds a slight zoom on hover */
+    transition: all 0.3s ease-in-out;
+  }
+}
